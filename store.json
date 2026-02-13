@@ -19,7 +19,7 @@
       "categoryId": "self_care",
       "cost": 50,
       "maxPerDay": 2,
-      "profileVisibility": "all",        // all profiles can see this
+      "profileVisibility": "all", 
       "requiresStreakDays": 0,
       "tags": ["adult", "mindfulness"]
     },
@@ -30,7 +30,7 @@
       "categoryId": "fun",
       "cost": 150,
       "maxPerWeek": 2,
-      "profileVisibility": "adult_only", // e.g. only Adam / Cerys
+      "profileVisibility": "adult_only", 
       "requiresStreakDays": 3,
       "tags": ["evening", "relax"]
     },
@@ -41,7 +41,7 @@
       "categoryId": "fun",
       "cost": 80,
       "maxPerDay": 1,
-      "profileVisibility": "kids_only",  // e.g. Ophelia only
+      "profileVisibility": "kids_only",
       "requiresStreakDays": 1,
       "tags": ["kids", "reward"]
     },
@@ -91,7 +91,7 @@
     },
     "profile_ophelia": {
       "visibleItemIds": ["game_time", "family_outing", "treat_dessert"],
-      "multiplier": 0.8           // optional: kids get a slight discount
+      "multiplier": 0.8
     }
   },
 
