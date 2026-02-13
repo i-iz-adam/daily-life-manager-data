@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "currency": "points",
+  "lastUpdated": "2026-02-13T00:00:00Z",
+
+  "categories": [
+    { "id": "self_care", "label": "Self‑Care", "emoji": "🧖", "color": "#60A5FA" },
+    { "id": "fun", "label": "Fun & Play", "emoji": "🎮", "color": "#F97316" },
+    { "id": "social", "label": "Social", "emoji": "💬", "color": "#A855F7" },
+    { "id": "family", "label": "Family Time", "emoji": "👨‍👩‍👧", "color": "#34D399" },
+    { "id": "treats", "label": "Treats", "emoji": "🍰", "color": "#F59E0B" }
+  ],
+
+  "items": [
+    {
+      "id": "break_coffee",
+      "name": "Mindful Coffee Break",
+      "description": "15–20 minutes of uninterrupted coffee/tea with no screens.",
+      "categoryId": "self_care",
+      "cost": 50,
+      "maxPerDay": 2,
+      "profileVisibility": "all",        // all profiles can see this
+      "requiresStreakDays": 0,
+      "tags": ["adult", "mindfulness"]
+    },
+    {
+      "id": "movie_night",
+      "name": "Movie Night Token",
+      "description": "One movie or 2 episodes of a show, guilt‑free.",
+      "categoryId": "fun",
+      "cost": 150,
+      "maxPerWeek": 2,
+      "profileVisibility": "adult_only", // e.g. only Adam / Cerys
+      "requiresStreakDays": 3,
+      "tags": ["evening", "relax"]
+    },
+    {
+      "id": "game_time",
+      "name": "Extra Game Time",
+      "description": "30 minutes of extra game / screen time.",
+      "categoryId": "fun",
+      "cost": 80,
+      "maxPerDay": 1,
+      "profileVisibility": "kids_only",  // e.g. Ophelia only
+      "requiresStreakDays": 1,
+      "tags": ["kids", "reward"]
+    },
+    {
+      "id": "family_outing",
+      "name": "Family Outing",
+      "description": "One family activity: walk, park trip, ice cream, etc.",
+      "categoryId": "family",
+      "cost": 400,
+      "maxPerMonth": 4,
+      "profileVisibility": "all",
+      "requiresStreakDays": 5,
+      "tags": ["weekend", "shared"]
+    },
+    {
+      "id": "treat_dessert",
+      "name": "Dessert Treat",
+      "description": "Pick a dessert after dinner.",
+      "categoryId": "treats",
+      "cost": 60,
+      "maxPerWeek": 3,
+      "profileVisibility": "all",
+      "requiresStreakDays": 0,
+      "tags": ["kids", "adult", "food"]
+    },
+    {
+      "id": "social_coffee_friend",
+      "name": "Coffee With a Friend",
+      "description": "One coffee / tea meetup with a friend.",
+      "categoryId": "social",
+      "cost": 200,
+      "maxPerMonth": 4,
+      "profileVisibility": "adult_only",
+      "requiresStreakDays": 4,
+      "tags": ["social", "outside"]
+    }
+  ],
+
+  "profileOverrides": {
+    "profile_adam": {
+      "visibleItemIds": ["break_coffee", "movie_night", "family_outing", "treat_dessert", "social_coffee_friend"],
+      "multiplier": 1.0
+    },
+    "profile_cerys": {
+      "visibleItemIds": ["break_coffee", "movie_night", "family_outing", "treat_dessert", "social_coffee_friend"],
+      "multiplier": 1.0
+    },
+    "profile_ophelia": {
+      "visibleItemIds": ["game_time", "family_outing", "treat_dessert"],
+      "multiplier": 0.8           // optional: kids get a slight discount
+    }
+  },
+
+  "weeklyBonuses": [
+    {
+      "id": "perfect_week",
+      "name": "Perfect Week Bonus",
+      "description": "All core habits completed 7/7 days.",
+      "bonusPoints": 100
+    },
+    {
+      "id": "five_of_seven",
+      "name": "5 of 7 Consistency",
+      "description": "Complete all habits at least 5 days this week.",
+      "bonusPoints": 50
+    }
+  ]
+}
